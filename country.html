@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<style>
+    body{
+        background-color: #ededed;
+    }
+    .country{
+        margin-top:30px;
+    }
+
+</style>
+<body>
+    <h2 class="text-center text-light bg-primary">Country  Details</h2>
+
+    <button onclick="history.back()" class="btn-outline-info btn-sm"> &lArr; back</button>
+        <div class="container country">
+           <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img id="flagImg" class="img-fluid" alt="flagImg"></img>
+                        </div>
+                        <div class="col-md-7">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>Official Name :</strong>
+                                    <span id="OfficialName"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Capital :</strong>
+                                    <span id="Capital"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Region :</strong>
+                                    <span id="Region"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Sub Region :</strong>
+                                    <span id="subRegion"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Population :</strong>
+                                    <span id="Population"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Area :</strong>
+                                    <span id="Area"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Languages :</strong>
+                                    <span id="Languages"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Currencies :</strong>
+                                    <span id="Currencies"></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Maps :</strong>
+                                    <span><a target ="blank" id="Maps"></a></span>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Borders :</strong>
+                                    <span id="Borders"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="loader d-none" id="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/country.js"></script>
+</body>
+</html>

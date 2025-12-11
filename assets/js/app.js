@@ -16,8 +16,16 @@ function snackBar(title,icon){
     })
 }
 
-async function fetchAllCountries(){
+function toggleSpinner(flag){
+   if(flag){
+     loader.classList.remove("d-none")
+   }else{
+    loader.classList.add("d-none")
+   }
+}
 
+async function fetchAllCountries(){
+    toggleSpinner(true)
    try{
      let res = await fetch(COUNTRY_URL,{
         method:"GET",
@@ -54,6 +62,9 @@ async function fetchAllCountries(){
     }
    catch(err){
         snackBar(err,"error")
+   }
+   finally{
+    toggleSpinner(false)
    }
 
 }

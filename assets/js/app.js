@@ -34,8 +34,8 @@ async function fetchAllCountries(){
     
     data.map(c=>{
         let col = document.createElement("div")
-            col.className = `col-lg-4 col-md-3 col-sm-2 col-12 mt-3`;
-            col.innerHTML = `<div class="card" data-id="${c.cca2}">
+            col.className = `col-lg-4 col-md-3 col-sm-2 col-12 mt-3 `;
+            col.innerHTML = `<div class="card" data-id="${c.cca2}" role="button">
                             <img src="${c.flags.png}" alt="${c.flags.alt}" title="${c.flags.alt}"></img>
                         </div>
                         <div class="card-body display-flex justify-content-end align-items-center">
